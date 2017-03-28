@@ -1,0 +1,6 @@
+c:\users\jeremi\documents\visual studio 2017\Projects\Lab2.4\Lab2.4\bin\Debug\Lab2.4.exe.config
+c:\users\jeremi\documents\visual studio 2017\Projects\Lab2.4\Lab2.4\bin\Debug\Lab2.4.exe
+c:\users\jeremi\documents\visual studio 2017\Projects\Lab2.4\Lab2.4\bin\Debug\Lab2.4.pdb
+c:\users\jeremi\documents\visual studio 2017\Projects\Lab2.4\Lab2.4\obj\Debug\Lab2.4.csprojResolveAssemblyReference.cache
+c:\users\jeremi\documents\visual studio 2017\Projects\Lab2.4\Lab2.4\obj\Debug\Lab2.4.exe
+c:\users\jeremi\documents\visual studio 2017\Projects\Lab2.4\Lab2.4\obj\Debug\Lab2.4.pdb
