@@ -11,16 +11,17 @@ namespace Lab2._4
     {
         public bool HasFinished { get { return HasFinished; } set { HasFinished = value; } }
         public List<int> List { get; set; }
-        int sum = 0;
+        public int Sum = 0;
 
         public void Run()
         {
             foreach (int element in List)
             {
-                sum += element;
-                Console.WriteLine(sum);
-                Thread.Sleep(1000);
+                Sum += element;
+                Console.Write("{0} ", Sum);
+                Thread.Sleep(100);
             }
+
         }
 
         public Agent(List<int> list = null)
