@@ -11,18 +11,18 @@ namespace SCR_anastaziak
     {
         public static List<OperationAgent> ListOfAgents;
 
-        public static List<OperationAgent> GenerateRunnables()
+        public static List<OperationAgent> GenerateRunnables(BankAcct bank)
         {
             ListOfAgents = new List<OperationAgent>();
 
             for (int i = 0; i < 5; i++)
             {
                 
-                ListOfAgents.Add(new OperationAgent(i + 1, 1));
+                ListOfAgents.Add(new OperationAgent(i + 1, 1, bank));
             }
             for (int i = 0; i < 5; i++) {
 
-                ListOfAgents.Add(new OperationAgent(i + 6, 2));
+                ListOfAgents.Add(new OperationAgent(i + 6, 2, bank));
             }
             
 
@@ -32,9 +32,9 @@ namespace SCR_anastaziak
         public static void RunThreads(List<OperationAgent> ListOfAgents)
         {
             List<Thread> ListOfThreads = new List<Thread>();
-            Thread BankThread = new Thread(new BankAcct().displayBalance);
-            BankThread.Start();
-            ListOfThreads.Add(BankThread);
+
+            
+            //ListOfThreads.Add(BankThread);
 
             foreach (OperationAgent agent in ListOfAgents)
             {
@@ -58,7 +58,10 @@ namespace SCR_anastaziak
 
         static void Main(string[] args)
         {
-            RunThreads(GenerateRunnables());
+            BankAcct bank = new BankAcct();
+            Thread BankThread = new Thread(bank.displayBalance);
+            BankThread.Start();
+            RunThreads(GenerateRunnables(bank));
             
             
         //RunFibers(GenerateRunnables());

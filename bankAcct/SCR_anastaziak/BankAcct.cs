@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 namespace SCR_anastaziak {
     class BankAcct {
         //public static Object acctLock = new Object();
-        public static int cash = 1;
-        //string Name { get; set; }
+        public static int cash = 11;
+        public SpinLock sl = new SpinLock();
 
         public BankAcct() { }
 
